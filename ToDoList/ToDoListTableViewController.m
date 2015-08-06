@@ -25,24 +25,6 @@
     [self loadInitialData]; //Tells the ToDoListTableViewController to load the data from below.
 }
 
-- (void)loadInitialData {
-
-    ToDoItem *item1 = [[ToDoItem alloc] init];
-    item1.itemName = @"Learn Objective-C";
-    [self.toDoItems addObject:item1];
-    ToDoItem *item2 = [[ToDoItem alloc] init];
-    item2.itemName = @"Exercise";
-    [self.toDoItems addObject:item2];
-    ToDoItem *item3 = [[ToDoItem alloc] init];
-    item3.itemName = @"Learn Technical Analysis";
-    [self.toDoItems addObject:item3];
-    ToDoItem *item4 = [[ToDoItem alloc] init];
-    item4.itemName = @"Learn Python";
-    [self.toDoItems addObject:item4];
-
-    
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
