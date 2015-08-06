@@ -74,6 +74,11 @@
     ToDoItem *toDoItem = [self.toDoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = toDoItem.itemName; //itemName is the property from the ToDoItem Class file.
     
+    if (toDoItem.completed) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
@@ -122,5 +127,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Table view delegate
+//This is the method that deals with the user touching the screen and specifically the row to select.
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    ToDoItem *tappedItem = [self.toDoItems objectAtIndex:indexPath.row];
+    tappedItem.completed = !tappedItem.completed;
+    
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
+}
+
+
+
+
+
+
 
 @end
