@@ -22,7 +22,6 @@
     [super viewDidLoad];
     
     self.toDoItems = [[NSMutableArray alloc] init];
-
 }
 
 
