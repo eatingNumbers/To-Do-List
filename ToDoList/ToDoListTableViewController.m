@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     self.toDoItems = [[NSMutableArray alloc] init];
-    [self loadInitialData]; //Tells the ToDoListTableViewController to load the data from below.
+
 }
 
 
